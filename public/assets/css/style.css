@@ -169,6 +169,21 @@ a:hover {
     margin-bottom: 20px;
     margin-top: 20px;
 }
+/******* /Spectacle *******/
+
+/****** Boutique ******/
+
+.container_boutique {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    margin: auto;
+}
+
+.image_boutique {}
+
+/******* /Boutique *******/
 
 /******* FOOTER ******/
 .site-footer
