@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Evenements index{% endblock %}
+
+{% block body %}
+    <div class="container_spectacles_list">
+        {% for evenement in evenements %}
+            <div class="d-flex justify-content-center">
+                <div class="spectacle_current col-6 p-4">
+                    <img src="{{ evenement.image }}">
+                    <h1>{{ evenement.nom }}</h1>
+                    <blockquote>{{ evenement.description }}</blockquote>
+                    {% if evenement.dates %}
+                    <p> À partir du : {{ evenement.dates|date('Y-m-d') }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
