@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Newlesters index{% endblock %}
+
+{% block body %}
+    <h1>Newlesters index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for newlester in newlesters %}
+            <tr>
+                <td>{{ newlester.id }}</td>
+                <td>{{ newlester.Email }}</td>
+                <td>
+                    <a href="{{ path('newlesters_show', {'id': newlester.id}) }}">show</a>
+                    <a href="{{ path('newlesters_edit', {'id': newlester.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('newlesters_new') }}">Create new</a>
+{% endblock %}

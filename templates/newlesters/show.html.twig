@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Newlesters{% endblock %}
+
+{% block body %}
+    <h1>Newlesters</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ newlester.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ newlester.Email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('newlesters_index') }}">back to list</a>
+
+    <a href="{{ path('newlesters_edit', {'id': newlester.id}) }}">edit</a>
+
+    {{ include('newlesters/_delete_form.html.twig') }}
+{% endblock %}
