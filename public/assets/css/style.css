@@ -94,9 +94,9 @@ a:hover {
 }
 
 .avis_home {
-    margin: auto;
     margin-top: 30px;
-    width: 80%;
+    width: 70%;
+    margin-left: 10%;
 }
 
 .comment-ctn {
